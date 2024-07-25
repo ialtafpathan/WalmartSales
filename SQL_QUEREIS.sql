@@ -1,6 +1,7 @@
 create database if not exists salesdatawalmart;
 
 use salesdatawalmart;
+
 create table sales2(
 invoice_id varchar(30) not null primary key,
 branch varchar(30) not null  ,
@@ -10,7 +11,7 @@ gender varchar(10) not null ,
 prodcut_line varchar(30) not null,
 unit_price decimal(10,2) not null,
 quantity int not null,
-vat float not 	null,
+vat float not null,
 total decimal(10,2) not null,
 date date not null,
 time  time not null,
@@ -40,9 +41,10 @@ from sales;
      when time between "12:01:00" and "16:00:00" then "Afternoon"
      else "Evining"
  end);
- select * from sales;
+
+
  
- -- 2 dayname
+ -- 2 day name
  select dayname(date)
  from sales;
  
@@ -58,7 +60,7 @@ from sales;
    update sales
  set Month_name =monthname(date);
   
----------------------------------------------  Generic Question ----------------------------------------------------------------------------- 
+---------------------------------------------  BASIC QUASTIONS ----------------------------------------------------------------------------- 
  -- 1) How many unique cities does the data have?
        select distinct city from sales;
 
